@@ -1,12 +1,19 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-  {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}
-</title>
-{{ $mvp := resources.Get "mvp.css" }}
-{{ $fonts := resources.Get "fonts.css" }}
-{{ $custom := resources.Get "custom.css" }}
-{{ $css := slice $mvp $fonts $custom | resources.Concat "css/stylesheet.css" | minify }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">
-<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    {{ if .IsHome }}
+      {{ .Site.Title }}
+    {{ else }}
+      {{ .Title }} - {{ .Site.Title }}
+    {{ end }}
+  </title>
+  {{ $mvp := resources.Get "mvp.css" }} 
+  {{ $fonts := resources.Get "fonts.css" }} 
+  {{ $custom := resources.Get "custom.css" }} 
+  {{ $css := slice $mvp $fonts $custom | resources.Concat "css/stylesheet.css" | minify }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
+  {{ template "_internal/google_analytics_async.html" . }}
+</head>
