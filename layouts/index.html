@@ -9,21 +9,22 @@
         {{- partial "social.html" . -}}
       </header>
       <main>
+        <hr>
         <section>
-          <hr>
-          <h4>Read my latest blog posts</h4>
+          <h6>Read my latest blog posts</h6>
         </section>
+        <section>
         {{ range first 3 (where .Site.RegularPages ".Params.type" "=" "post") }}
-        <article>
-          <a href="{{ .Permalink }}">
-            <h3>{{ .Title }}</h3>
-          </a>
-          <p>{{ .Summary }}</p>
-          <p>
-            <small>published on {{ .Date.Format "Mon, 02 Jan 2006" }}</small>
-          </p>
-        </article>
+          <aside>
+            <a href="{{ .Permalink }}">
+              <h6>{{ .Title }}</h6>
+            </a>
+            <p>
+              <small>published on {{ .Date.Format "Mon, 02 Jan 2006" }}</small>
+            </p>
+          </aside>
         {{ end }}
+        </section>
       </main>
       <footer>
         {{- partial "footer.html" . -}}

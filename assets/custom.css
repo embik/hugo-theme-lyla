@@ -4,7 +4,7 @@
     --color-secondary-accent: #2B7A78;
     --color-bg: #FEFFFF;
     --width-content: 750px;
-    --width-card: 250px;
+    --width-card: 185px;
     --font-family: "Merriweather", serif;
     --font-family-sans: "Open Sans", sans-serif;
     --font-size-normal: 16px;
@@ -45,9 +45,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
 
-p, article li, code {
+p, article li {
   font-size: var(--font-size-normal);
   line-height: var(--line-height-text);
+}
+
+code {
+  font-size: var(--font-size-normal);
+  line-height: 1.4;
 }
 
 small {
@@ -76,6 +81,12 @@ h5 {
 
 h6 {
   font-size: 16px;
+  font-weight: 700;
+}
+
+aside h6 {
+  margin-top: 16px;
+  margin-bottom: 4px;
 }
 
 code {
