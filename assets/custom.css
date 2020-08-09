@@ -1,9 +1,15 @@
 :root {
-    --color-secondary: #0074D9;
-    --color-secondary-accent: #0074D9;
-    --width-content: 920px;
+    --color-text: #2C3531;
+    --color-secondary: #659DBD;
+    --color-secondary-accent: #2B7A78;
+    --color-bg: #FEFFFF;
+    --width-content: 750px;
     --width-card: 250px;
-    --font-family: "Lato", sans-serif;
+    --font-family: "Merriweather", serif;
+    --font-family-sans: "Open Sans", sans-serif;
+    --font-size-normal: 16px;
+    --font-size-small: 12px;
+    --line-height-text: 1.75;
 }
 
 .feather {
@@ -35,23 +41,41 @@ main > article > p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font-family-sans);
+  font-weight: 800;
 }
 
-main article p, main article li {
-  font-size: 1.2rem;
+p, article li, code {
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height-text);
+}
+
+small {
+  font-size: var(--font-size-small);
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 31px;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 24px;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
 }
 
 code {
@@ -61,6 +85,12 @@ code {
 a.anchor {
   opacity: 0.5;
   font-size: 0.8em;
+}
+
+nav {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
 }
 
 nav.list-nav {

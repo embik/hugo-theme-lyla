@@ -11,7 +11,7 @@
       <main>
         <section>
           <hr>
-          <h2>Read my latest blog posts</h2>
+          <h4>Read my latest blog posts</h4>
         </section>
         {{ range first 3 (where .Site.RegularPages ".Params.type" "=" "post") }}
         <article>
