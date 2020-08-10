@@ -1,8 +1,8 @@
 <nav>
   {{ if not .IsHome }}
-  <a href="{{ "" | absURL }}">{{ .Site.Title }}</a>
+  <small>{{ .Site.Title }}</small>
   {{ else }}
-  <a></a>
+  <div></div>
   {{ end }}
   <ul>
     <li>

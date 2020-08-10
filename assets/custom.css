@@ -4,7 +4,7 @@
     --color-secondary-accent: #2B7A78;
     --color-bg: #FEFFFF;
     --width-content: 750px;
-    --width-card: 185px;
+    --width-card: 310px;
     --font-family: "Merriweather", serif;
     --font-family-sans: "Open Sans", sans-serif;
     --font-size-normal: 16px;
@@ -111,4 +111,8 @@ nav.list-nav {
 
 nav.list-nav a {
   margin: 0.5em;
+}
+
+.tagline {
+  font-size: var(--font-size-small);
 }
