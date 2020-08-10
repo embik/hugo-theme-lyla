@@ -8,13 +8,15 @@
         <p>{{ .Site.Params.Description }}</p>
         {{- partial "social.html" . -}}
       </header>
+      {{ $posts := (where .Site.RegularPages "Params.type" "=" "post") }}
+      {{ if $posts }}
       <main>
         <hr>
         <section>
           <h6>Read my latest blog posts</h6>
         </section>
         <section>
-        {{ range first 2 (where .Site.RegularPages ".Params.type" "=" "post") }}
+        {{ range first 2 $posts }}
           <aside>
             <a href="{{ .Permalink }}">
               <h6>{{ .Title }}</h6>
@@ -29,6 +31,7 @@
         {{ end }}
         </section>
       </main>
+      {{ end }}
       <footer>
         {{- partial "footer.html" . -}}
       </footer>
