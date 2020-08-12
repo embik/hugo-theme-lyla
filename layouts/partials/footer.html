@@ -1,7 +1,12 @@
 <hr>
 {{ if .Site.Copyright }}
 <p>
-  <small>Copyright &#169; {{ .Site.Copyright }}</small><br>
+  <small>
+    Copyright &#169; {{ .Site.Copyright }} 
+  {{ range $i, $item := .Site.Menus.footer }}
+    - <a href="{{ .URL }}">{{ .Name }}</a>
+  {{ end }}
+  </small>
 </p>
 <p>
   <small>created with <a href="https://gohugo.io">Hugo</a>, <a href="https://github.com/embik/hugo-theme-lyla">Lyla</a> and <a href="https://github.com/andybrewer/mvp">mvp.css</a>.</small>
