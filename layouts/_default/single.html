@@ -6,6 +6,7 @@
         {{- partial "header.html" . -}}
       </header>
       <main>
+        {{- partial "tags.html" . -}}
         <article class="content">
           {{ .Content | replaceRE "(<h[2-9] id=\"([^\"]+)\".+)(</h[2-9]+>)" (printf "%s%s%s" "${1}&nbsp;<a class=\"anchor\" href=\"#${2}\">" (partial "feather.html" "corner-down-left") "</a> ${3}") | safeHTML }}
         </article>
