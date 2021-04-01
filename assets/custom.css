@@ -1,15 +1,20 @@
 :root {
     --color-text: #2C3531;
-    --color-secondary: #659DBD;
+    --color-secondary: #3F4D47;
     --color-secondary-accent: #2B7A78;
     --color-bg: #FEFFFF;
     --width-content: 750px;
     --width-card: 310px;
     --font-family: "Merriweather", serif;
     --font-family-sans: "Open Sans", sans-serif;
-    --font-size-normal: 16px;
+    --font-size-normal: 15px;
     --font-size-small: 12px;
-    --line-height-text: 1.75;
+    --line-height-text: 1.8;
+}
+
+body {
+    max-width: 700px;
+    margin: auto;
 }
 
 .feather {
@@ -32,7 +37,6 @@ div.social > a {
 }
 
 main > article > p {
-  text-align: justify;
 }
 
 .highlight > pre {
@@ -115,4 +119,8 @@ nav.list-nav a {
 
 .tagline {
   font-size: var(--font-size-small);
+}
+
+.no-bottom-margin {
+    margin-bottom: 0px;
 }

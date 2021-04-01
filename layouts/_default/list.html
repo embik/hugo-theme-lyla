@@ -5,7 +5,6 @@
       {{ $paginate := .Paginate (where .Site.RegularPages ".Params.type" "=" "post") 5 }}
       <header>
         {{- partial "header.html" . -}}
-        <h1>Blog Posts</h1>
         {{ if gt $paginate.PageNumber 1 }}
         <p>Page {{ $paginate.PageNumber }}</p>
         {{ end }}
@@ -24,9 +23,9 @@
         {{ range $index, $page := $paginate.Pages }}
         <article>
           <a href="{{ .Permalink }}">
-            <h3>{{ .Title }}</h3>
+            <h4 class="no-bottom-margin">{{ .Title }}</h4>
           </a>
-          <p>{{ .Summary }}</p>
+          <!--<p>{{ .Summary }}</p>-->
           <p>
             <small>published on {{ .Date.Format "Mon, 02 Jan 2006" }}</small>
           </p>

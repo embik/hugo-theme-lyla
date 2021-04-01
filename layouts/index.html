@@ -10,7 +10,7 @@
       </header>
       {{ $posts := (where .Site.RegularPages "Params.type" "=" "post") }}
       {{ if $posts }}
-      <main>
+      <!--<main>
         <hr>
         <section>
           <h6>Read my latest blog posts</h6>
@@ -30,7 +30,7 @@
           </aside>
         {{ end }}
         </section>
-      </main>
+      </main>-->
       {{ end }}
       <footer>
         {{- partial "footer.html" . -}}

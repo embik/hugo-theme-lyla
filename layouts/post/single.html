@@ -12,7 +12,7 @@
       <hr>
       <main>
         <article class="content">
-          {{ .Content | replaceRE "(<h[2-9] id=\"([^\"]+)\".+)(</h[2-9]+>)" (printf "%s%s%s" "${1}&nbsp;<a class=\"anchor\" href=\"#${2}\">" (partial "feather.html" "paperclip") "</a> ${3}") | safeHTML }}
+          {{ .Content | replaceRE "(<h[2-9] id=\"([^\"]+)\".+)(</h[2-9]+>)" (printf "%s%s%s" "${1}&nbsp;<a class=\"anchor\" href=\"#${2}\">" "&para;" "</a> ${3}") | safeHTML }}
         </article>
       </main>
       <footer>
