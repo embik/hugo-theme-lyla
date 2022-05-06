@@ -63,8 +63,12 @@ small {
   font-size: var(--font-size-small);
 }
 
+header h1, header p {
+    text-align: left;
+}
+
 h1 {
-  font-size: 31px;
+  font-size: 26px;
 }
 
 h2 {
