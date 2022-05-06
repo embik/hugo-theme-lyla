@@ -63,7 +63,7 @@ small {
   font-size: var(--font-size-small);
 }
 
-header h1, header p {
+header.post h1, header.post p {
     text-align: left;
 }
 
