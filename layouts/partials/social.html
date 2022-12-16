@@ -1,6 +1,6 @@
 <div class="social">
   <a href="{{ absURL "index.xml" }}">{{ partial "feather.html" "rss" }}</a>
   {{ range $index, $component := .Site.Social }}
-  <a href="{{ $component }}">{{ partial "feather.html" $index }}</a>
+  <a rel="me" href="{{ $component }}">{{ partial "feather.html" $index }}</a>
   {{ end }}
 </div>
