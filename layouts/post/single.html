@@ -6,7 +6,7 @@
         {{- partial "header.html" . -}}
         <h1>{{ .Title }}</h1>
         <p>
-          <small>published on {{ .Date.Format "Mon, 02 Jan 2006" }}</small>
+        <small>Published on {{ .Date.Format "Mon, 02 Jan 2006" }} - Estimated reading time: {{ .ReadingTime}} min.</small>
         </p>
       </header>
       <hr>
