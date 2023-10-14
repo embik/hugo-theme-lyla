@@ -29,6 +29,7 @@ body {
 
 div.social {
   margin-top: 4em;
+  margin-bottom: 4em;
 }
 
 div.social > a {
@@ -110,6 +111,11 @@ nav {
   font-family: var(--font-family-sans);
   font-size: var(--font-size-small);
   text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+nav.bottom-margin {
+    margin-bottom: 7rem;
 }
 
 nav.list-nav {
@@ -134,4 +140,17 @@ p img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+hr {
+    margin: 0;
+}
+
+main.list {
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.center {
+    text-align: center;
 }

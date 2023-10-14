@@ -6,16 +6,22 @@
         {{- partial "header.html" . -}}
         <h1>{{ .Title }}</h1>
         <p>
-        <small>Published on {{ .Date.Format "Mon, 02 Jan 2006" }} - Estimated reading time: {{ .ReadingTime}} min.</small>
+            <small>
+                Published on {{ .Date.Format "Mon, 02 Jan 2006" }}. Estimated reading time: {{ .ReadingTime}} min.<br>
+                {{ with .GetTerms "tags" }}
+                    {{ range . }}
+                        <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a> 
+                    {{ end }}
+                {{ end }}
+            </small>
         </p>
       </header>
       <hr>
       <main>
         <article class="content">
-          {{ .Content | replaceRE "(<h[2-9] id=\"([^\"]+)\".+)(</h[2-9]+>)" (printf "%s%s%s" "${1}&nbsp;<a class=\"anchor\" href=\"#${2}\">" "&para;" "</a> ${3}") | safeHTML }}
+          {{ .Content | replaceRE "(<h[2-9] id=\"([^\"]+)\".+)(</h[2-9]+>)" (printf "%s%s%s" "${1}&nbsp;<a class=\"anchor\" href=\"#${2}\">" "#" "</a> ${3}") | safeHTML }}
         </article>
       </main>
-      <hr>
       <footer>
         {{- partial "footer.html" . -}}
       </footer>

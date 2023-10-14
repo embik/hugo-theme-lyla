@@ -1,4 +1,4 @@
-<nav>
+<nav {{ if .IsHome }}class="bottom-margin"{{ end }}>
   {{ if not .IsHome }}
   <small>{{ .Site.Title }}</small>
   {{ else }}

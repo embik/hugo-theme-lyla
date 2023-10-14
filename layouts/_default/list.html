@@ -2,7 +2,7 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-      {{ $paginate := .Paginate (where .Site.RegularPages ".Params.type" "=" "post") 5 }}
+      {{ $paginate := .Paginate .Pages 5 }}
       <header>
         {{- partial "header.html" . -}}
         {{ if gt $paginate.PageNumber 1 }}
@@ -18,8 +18,9 @@
           {{ end }}
         </nav>
         {{ end }}
+        <h2>{{ .Title }}</h2>
       </header>
-      <main>
+      <main class="list">
         {{ range $index, $page := $paginate.Pages }}
         <article>
           <a href="{{ .Permalink }}">
