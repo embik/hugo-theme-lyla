@@ -1,6 +1,6 @@
 <div class="social">
-  <a href="{{ absURL "index.xml" }}">{{ partial "feather.html" "rss" }}</a>
-  {{ range $index, $component := .Site.Social }}
-  <a rel="me" href="{{ $component }}">{{ partial "feather.html" $index }}</a>
+  <a href="{{ absURL "index.xml" }}" aria-label="RSS Feed" title="RSS Feed">{{ partial "feather.html" "rss" }}</a>
+  {{ range $social := .Site.Params.Socials }}
+  <a rel="me" href="{{ $social.url }}" arial-label="{{ $social.label }}" title="{{ $social.label }}">{{ partial "feather.html" $social.icon }}</a>
   {{ end }}
 </div>

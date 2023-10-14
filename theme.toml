@@ -3,7 +3,7 @@
 
 name = "Lyla"
 license = "MIT"
-licenselink = "https://github.com/embik/hugo-theme-lyla/blob/master/LICENSE"
+licenselink = "https://github.com/embik/hugo-theme-lyla/blob/main/LICENSE"
 description = ""
 homepage = "https://github.com/embik/hugo-theme-lyla"
 tags = []
@@ -12,4 +12,4 @@ min_version = "0.41"
 
 [author]
   name = "Marvin Beckers"
-  homepage = "https://embik.me"
+  homepage = "https://marvin.beckers.dev"
