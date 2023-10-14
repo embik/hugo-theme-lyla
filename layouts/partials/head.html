@@ -19,7 +19,7 @@
   {{ $mvp := resources.Get "mvp.css" }}
   {{ $fonts := resources.Get "fonts.css" }}
   {{ $custom := resources.Get "custom.css" }}
-  {{ $css := slice $mvp $fonts $custom | resources.Concat "css/stylesheet.css" | minify }}
+  {{ $css := slice $mvp $fonts $custom | resources.Concat "css/stylesheet.css" | minify | resources.Fingerprint "md5" }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
   <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
   {{ template "_internal/opengraph.html" . }}
