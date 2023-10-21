@@ -2,8 +2,12 @@
 <html lang="{{ site.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body>
-      <header>
+      <header class="left-aligned">
         {{- partial "header.html" . -}}
+        <h1>{{ .Title }}</h1>
+        {{- with .Params.Intro -}}
+        <p>{{ . }}</p>
+        {{- end -}}
       </header>
       <main>
         <article class="content">

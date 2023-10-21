@@ -66,9 +66,12 @@ small {
   font-size: var(--font-size-small);
 }
 
-header.post h1, header.post p {
+header {
+    padding-bottom: 0;
+}
+
+header.left-aligned h1, header.left-aligned p {
     text-align: left;
-    margin: 0;
 }
 
 h1 {

@@ -3,8 +3,12 @@
     {{- partial "head.html" . -}}
     <body>
       {{ $paginate := .Paginate .Pages 5 }}
-      <header>
+      <header class="left-aligned">
         {{- partial "header.html" . -}}
+        <h1>{{ .Title }}</h1>
+        <p>
+          {{ .Content }}
+        </p>
         {{ if gt $paginate.PageNumber 1 }}
         <p>Page {{ $paginate.PageNumber }}</p>
         {{ end }}
@@ -18,7 +22,6 @@
           {{ end }}
         </nav>
         {{ end }}
-        <h2>{{ .Title }}</h2>
       </header>
       <main class="list">
         {{ range $index, $page := $paginate.Pages }}
