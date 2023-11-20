@@ -25,6 +25,7 @@
       </header>
       <main class="list">
         {{ range $index, $page := $paginate.Pages }}
+        {{ if not .Params.NoIndex }}
         <article>
           <a href="{{ .Permalink }}">
             <h4 class="no-bottom-margin">{{ .Title }}</h4>
@@ -38,6 +39,7 @@
               {{ end }}
           </small>
         </article>
+        {{ end }}
         {{ end }}
       </main>
       <footer>
