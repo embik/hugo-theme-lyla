@@ -121,7 +121,7 @@ a.anchor {
 
 nav {
   font-family: var(--font-family-sans);
-  font-size: var(--font-size-small);
+  font-size: 12px;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
