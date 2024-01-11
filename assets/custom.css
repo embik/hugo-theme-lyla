@@ -169,3 +169,7 @@ main {
 .center {
     text-align: center;
 }
+
+.post {
+    margin-top: 3em;
+}

@@ -16,7 +16,7 @@
             </small>
         </p>
       </header>
-      <main>
+      <main class="post">
         <article class="content">
           {{ .Content | replaceRE "(<h[2-9] id=\"([^\"]+)\".+)(</h[2-9]+>)" (printf "%s%s%s" "${1}&nbsp;<a class=\"anchor\" href=\"#${2}\">" "#" "</a> ${3}") | safeHTML }}
         </article>
