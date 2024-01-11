@@ -3,17 +3,17 @@
     --color-secondary: #3F4D47;
     --color-secondary-accent: #2B7A78;
     --color-bg: #FEFFFF;
-    --width-content: 750px;
+    --width-content: 800px;
     --width-card: 310px;
-    --font-family: "Merriweather", serif;
+    --font-family: "et-book", serif;
     --font-family-sans: "Open Sans", sans-serif;
-    --font-size-normal: 15px;
-    --font-size-small: 12px;
-    --line-height-text: 1.8;
+    --font-size-normal: 1.3em;
+    --font-size-small: 14px;
+    --line-height-text: 1.5;
 }
 
 body {
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
 }
 
@@ -58,8 +58,11 @@ p, article li {
 }
 
 code {
-  font-size: var(--font-size-normal);
   line-height: 1.4;
+}
+
+pre code {
+  font-size: var(--font-size-normal);
 }
 
 small {
@@ -75,27 +78,30 @@ header.left-aligned h1, header.left-aligned p {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 2.3em;
+  letter-spacing: -0.05em;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.8em;
+  letter-spacing: -0.05em;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 1.6em;
+  letter-spacing: -0.025em;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 1.4em;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 1.2em;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
 }
 
