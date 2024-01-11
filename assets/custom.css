@@ -32,6 +32,10 @@ div.social {
   margin-bottom: 4em;
 }
 
+p a {
+    text-decoration: underline;
+}
+
 div.social > a {
   margin: 8px;
   font-size: 30px;
