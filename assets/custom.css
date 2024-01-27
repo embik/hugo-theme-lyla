@@ -67,6 +67,19 @@ code {
 
 pre code {
   font-size: var(--font-size-normal);
+  white-space: unset;
+  scrollbar-color: #e6edf3 #0d1117;
+}
+
+pre code::-webkit-scrollbar {
+  background: #0d1117;
+  width: 8px;
+  height: 8px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  background: #e6edf3;
+  border-radius: 5px;
 }
 
 small {
