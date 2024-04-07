@@ -12,3 +12,6 @@
 {{ end }}
 <p>
 </p>
+{{ $colormode := resources.Get "js/colormode.js" }}
+{{ $js := slice $colormode | resources.Concat "js/main.js" | resources.Minify | resources.Fingerprint "md5" }}
+<script defer language="javascript" type="text/javascript"  src="{{ $js.RelPermalink }}"></script>

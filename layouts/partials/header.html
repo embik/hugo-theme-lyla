@@ -17,6 +17,22 @@
   	<li>
 	  <a href="{{ .URL }}">{{ .Name }}</a>
 	</li>
+    <li class="mode-toggles">
+        <!--- Light mode button --->
+        <a class="feather color-mode__btn light--hidden dark--hidden" aria-label="Toggle light mode">
+            {{ partial "feather.html" "sun" }}
+        </a>
+
+        <!--- Dark mode button --->
+        <a class="feather color-mode__btn dark--hidden user--hidden" aria-label="Toggle dark mode">
+            {{ partial "feather.html" "moon" }}
+        </a>
+
+        <!--- User mode button --->
+        <a class="feather color-mode__btn light--hidden user--hidden" aria-label="Toggle user mode">
+            {{ partial "feather.html" "monitor" }}
+        </a>
+    </li>
   	{{ end }}
   </ul>
 </nav>
