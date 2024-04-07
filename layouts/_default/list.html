@@ -9,21 +9,11 @@
         <p>
           {{ .Content }}
         </p>
-        {{ if gt $paginate.PageNumber 1 }}
-        <p>Page {{ $paginate.PageNumber }}</p>
-        {{ end }}
-        {{ if gt $paginate.TotalPages 1 }}
-        <nav class="list-nav">
-          {{ if $paginate.HasPrev }}
-          <a href="{{ $paginate.Prev.URL }}">prev. page</a>
-          {{ end }}
-          {{ if $paginate.HasNext }}
-          <a href="{{ $paginate.Next.URL }}">next page</a>
-          {{ end }}
-        </nav>
-        {{ end }}
       </header>
       <main class="list">
+        {{ if gt $paginate.PageNumber 1 }}
+        <h2 style="text-align:center;">Page {{ $paginate.PageNumber }}</h2>
+        {{ end }}
         {{ range $index, $page := $paginate.Pages }}
         {{ if not .Params.NoIndex }}
         <article>
@@ -41,6 +31,17 @@
         </article>
         {{ end }}
         {{ end }}
+        {{ if gt $paginate.TotalPages 1 }}
+        <nav class="list-nav">
+          {{ if $paginate.HasPrev }}
+          <a href="{{ $paginate.Prev.URL }}">prev. page</a>
+          {{ end }}
+          {{ if $paginate.HasNext }}
+          <a href="{{ $paginate.Next.URL }}">next page</a>
+          {{ end }}
+        </nav>
+        {{ end }}
+
       </main>
       <footer>
         {{- partial "footer.html" . -}}

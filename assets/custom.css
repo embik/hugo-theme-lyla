@@ -195,6 +195,17 @@ nav ul {
     align-items: center;
 }
 
+nav.list-nav {
+    display: flex;
+    margin-top: 4rem;
+    margin-bottom: 0px;
+    justify-content: center;
+}
+
+nav.list-nav a {
+    display: inline-block;
+}
+
 .tagline {
   font-size: var(--font-size-small);
 }
