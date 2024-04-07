@@ -20,6 +20,7 @@
     --color-bg-secondary: #555;
     --color-link: #fafafa;
     --color-text: #fefefe;
+    --color-text-secondary: #A1A1AA;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +30,7 @@
         --color-bg-secondary: #555;
         --color-link: #fafafa;
         --color-text: #fefefe;
+        --color-text-secondary: #A1A1AA;
     }
 }
 
