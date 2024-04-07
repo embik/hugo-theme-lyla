@@ -15,6 +15,7 @@
 }
 
 :root[color-mode="dark"] {
+    --color-accent: #27272A;
     --color-bg: #090C0D;
     --color-bg-secondary: #555;
     --color-link: #fafafa;
@@ -23,6 +24,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root[color-mode="user"] {
+        --color-accent: #27272A;
         --color-bg: #090C0D;
         --color-bg-secondary: #555;
         --color-link: #fafafa;
@@ -98,6 +100,11 @@ pre code {
   white-space: unset;
   scrollbar-color: #e6edf3 #0d1117;
   overflow: auto;
+  background: none;
+}
+
+code {
+   color: inherit;
 }
 
 pre code::-webkit-scrollbar {
