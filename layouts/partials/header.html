@@ -17,6 +17,7 @@
   	<li>
 	  <a href="{{ .URL }}">{{ .Name }}</a>
 	</li>
+  	{{ end }}
     <li class="mode-toggles">
         <!--- Light mode button --->
         <a class="feather color-mode__btn light--hidden dark--hidden" aria-label="Toggle light mode" title="Use light mode">
@@ -33,6 +34,5 @@
             {{ partial "feather.html" "monitor" }}
         </a>
     </li>
-  	{{ end }}
   </ul>
 </nav>
