@@ -21,6 +21,7 @@
     --color-link: #fafafa;
     --color-text: #fefefe;
     --color-text-secondary: #A1A1AA;
+    --color-shadow: #bbbbbb20;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,6 +32,7 @@
         --color-link: #fafafa;
         --color-text: #fefefe;
         --color-text-secondary: #A1A1AA;
+        --color-shadow: #bbbbbb20;
     }
 }
 

@@ -14,11 +14,12 @@
         {{ if gt $paginate.PageNumber 1 }}
         <h2 style="text-align:center;">Page {{ $paginate.PageNumber }}</h2>
         {{ end }}
+        <section>
         {{ range $index, $page := $paginate.Pages }}
         {{ if not .Params.NoIndex }}
-        <article>
+        <aside style="width:100%;">
           <a href="{{ .Permalink }}">
-            <h4 class="no-bottom-margin">{{ .Title }}</h4>
+            <h4 class="no-bottom-margin" style="margin-top:0px;">{{ .Title }}</h4>
           </a>
           <small style="display:block;">
               Published on {{ .Date.Format "Mon, 02 Jan 2006" }}.
@@ -28,9 +29,10 @@
               {{ end }}
               {{ end }}
           </small>
-        </article>
+        </aside>
         {{ end }}
         {{ end }}
+        </section>
         {{ if gt $paginate.TotalPages 1 }}
         <nav class="list-nav">
           {{ if $paginate.HasPrev }}
