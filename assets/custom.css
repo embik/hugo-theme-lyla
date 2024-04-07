@@ -4,7 +4,7 @@
     --color-secondary: #3F4D47;
     --color-secondary-accent: #2B7A78;
     --color-bg: #FEFFFF;
-    --color-bg-secondary: #090C0D;
+    --color-bg-secondary: #E4E4E7;
     --width-content: 800px;
     --width-card: 310px;
     --font-family: "Lora", serif;
@@ -17,7 +17,7 @@
 :root[color-mode="dark"] {
     --color-accent: #27272A;
     --color-bg: #090C0D;
-    --color-bg-secondary: #555;
+    --color-bg-secondary: #1F2937;
     --color-link: #fafafa;
     --color-text: #fefefe;
     --color-text-secondary: #A1A1AA;
@@ -27,7 +27,7 @@
     :root[color-mode="user"] {
         --color-accent: #27272A;
         --color-bg: #090C0D;
-        --color-bg-secondary: #555;
+        --color-bg-secondary: #1F2937;
         --color-link: #fafafa;
         --color-text: #fefefe;
         --color-text-secondary: #A1A1AA;
