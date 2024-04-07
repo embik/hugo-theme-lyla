@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.LanguageCode }}">
+<html color-mode="user" lang="{{ site.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body>
       {{ $paginate := .Paginate .Pages 5 }}
@@ -30,7 +30,7 @@
           <a href="{{ .Permalink }}">
             <h4 class="no-bottom-margin">{{ .Title }}</h4>
           </a>
-          <small>
+          <small style="display:block;">
               Published on {{ .Date.Format "Mon, 02 Jan 2006" }}.
               {{ with .GetTerms "tags" }}
               {{ range . }}
