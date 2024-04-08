@@ -242,11 +242,6 @@ hr {
     cursor: pointer;
 }
 
-.small {
-    font-size: var(--font-size-small);
-    color: var(--color-text-secondary);
-}
-
 /* Any element with the class "light--hidden" will be hidden when the site is set to Light Mode */
 :root[color-mode="light"] .light--hidden {
     display: none;
