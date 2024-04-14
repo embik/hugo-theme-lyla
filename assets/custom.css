@@ -16,23 +16,23 @@
 
 :root[color-mode="dark"] {
     --color-accent: #27272A;
-    --color-bg: #090C0D;
+    --color-bg: #1D1E20;
     --color-bg-secondary: #1F2937;
-    --color-link: #fafafa;
-    --color-text: #fefefe;
+    --color-link: #FAFAFA;
+    --color-text: #F0F0F0;
     --color-text-secondary: #A1A1AA;
-    --color-shadow: #bbbbbb20;
+    --color-shadow: #BBBBBB20;
 }
 
 @media (prefers-color-scheme: dark) {
     :root[color-mode="user"] {
         --color-accent: #27272A;
-        --color-bg: #090C0D;
+        --color-bg: #1D1E20;
         --color-bg-secondary: #1F2937;
-        --color-link: #fafafa;
-        --color-text: #fefefe;
+        --color-link: #FAFAFA;
+        --color-text: #F0F0F0;
         --color-text-secondary: #A1A1AA;
-        --color-shadow: #bbbbbb20;
+        --color-shadow: #BBBBBB20;
     }
 }
 
