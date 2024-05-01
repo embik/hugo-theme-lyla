@@ -25,19 +25,6 @@
     --box-shadow: 2px 2px 6px;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root[color-mode="user"] {
-        --color-accent: #27272A;
-        --color-bg: #1D1E20;
-        --color-bg-secondary: #FFFFFF20;
-        --color-link: #FAFAFA;
-        --color-text: #F0F0F0;
-        --color-text-secondary: #A1A1AA;
-        --color-shadow: #BBBBBB10;
-         --box-shadow: 2px 2px 6px;
-    }
-}
-
 main {
     padding: 0 1rem 1rem 1rem;
 }
