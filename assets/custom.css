@@ -1,20 +1,24 @@
 :root {
+    --width-content: 800px;
+    --width-card: 310px;
+    --font-family: "Lora", serif;
+    --font-family-sans: "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, Cantarell, "Helvetica Neue", sans-serif;
+    --font-size-normal: 18.5px;
+    --font-size-small: 14px;
+    --line-height-text: 1.8;
+    --hover-brightness: 4;
+
+    /* light mode colors */
     --color-text: #2C3531;
     --color-link: #18181B;
     --color-secondary: #3F4D47;
     --color-secondary-accent: #2B7A78;
     --color-bg: #FEFFFF;
     --color-bg-secondary: #E4E4E7;
-    --width-content: 800px;
-    --width-card: 310px;
-    --font-family: "Lora", serif;
-    --font-family-sans: "Open Sans", sans-serif;
-    --font-size-normal: 18.5px;
-    --font-size-small: 14px;
-    --line-height-text: 1.8;
 }
 
 :root[color-mode="dark"] {
+    /* dark mode colors */
     --color-accent: #27272A;
     --color-bg: #1D1E20;
     --color-bg-secondary: #FFFFFF20;
@@ -23,6 +27,7 @@
     --color-text-secondary: #A1A1AA;
     --color-shadow: #BBBBBB10;
     --box-shadow: 2px 2px 6px;
+    --hover-brightness: 0.8;
 }
 
 main {
@@ -36,8 +41,9 @@ main.list a {
     text-decoration: none;
 }
 
-a:hover {
-    opacity: 0.75;
+a {
+    font-weight: inherit;
+    text-underline-offset: 4px;
 }
 
 .bottom-margin {
