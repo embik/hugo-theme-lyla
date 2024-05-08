@@ -207,11 +207,27 @@ nav.list-nav a {
     margin-bottom: 0px;
 }
 
-p img {
+p img, figure img {
     max-width: 75%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 6px;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+figure figcaption h4 {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+mark {
+    font-size: var(--font-size-normal);
+    line-height: var(--line-height-text);
 }
 
 hr {
