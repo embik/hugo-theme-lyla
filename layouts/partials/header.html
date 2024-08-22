@@ -9,9 +9,6 @@
       <a href="{{ "" | relURL }}">Home</a>
     </li>
     {{ if .Site.GetPage "/blog" }}
-    <li>
-      <a href="{{ "blog/" | relURL }}">Blog</a>
-    </li>
     {{ end }}
 	{{ range $i, $item := .Site.Menus.main }}
   	<li>
