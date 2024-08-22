@@ -5,34 +5,29 @@
       {{ $paginate := .Paginate .Pages 5 }}
       <header class="left-aligned">
         {{- partial "header.html" . -}}
-        <h1>{{ .Title }}</h1>
+        <h1>
+            {{ .Title }}
+            {{- if gt $paginate.PageNumber 1 }}
+                (Page {{ $paginate.PageNumber }})
+            {{- end }}
+        </h1>
         <p>
           {{ .Content }}
         </p>
       </header>
-      <main class="list">
-        {{ if gt $paginate.PageNumber 1 }}
-        <h2 style="text-align:center;">Page {{ $paginate.PageNumber }}</h2>
-        {{ end }}
-        <section>
-        {{ range $index, $page := $paginate.Pages }}
-        {{ if not .Params.NoIndex }}
-        <aside style="width:100%;">
-          <a href="{{ .Permalink }}">
-            <h4 class="no-bottom-margin" style="margin-top:0px;">{{ .Title }}</h4>
-          </a>
-          <small style="display:block;">
-              Published on {{ .Date.Format "Mon, 02 Jan 2006" }}.
-              {{ with .GetTerms "tags" }}
-              {{ range . }}
-              <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a> 
-              {{ end }}
-              {{ end }}
-          </small>
-        </aside>
-        {{ end }}
-        {{ end }}
-        </section>
+      <main class="content">
+        <article>
+            <ul>
+            {{ range $index, $page := $paginate.Pages }}
+            {{ if not .Params.NoIndex }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <small>{{ .Date.Format "January 2, 2006" }}</small>
+                </li>
+            {{ end }}
+            {{ end }}
+            </ul>
+        </article>
         {{ if gt $paginate.TotalPages 1 }}
         <nav class="list-nav">
           {{ if $paginate.HasPrev }}
@@ -43,7 +38,6 @@
           {{ end }}
         </nav>
         {{ end }}
-
       </main>
       <footer>
         {{- partial "footer.html" . -}}
