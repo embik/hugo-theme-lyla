@@ -168,7 +168,7 @@ a.anchor {
     opacity: 0.4;
 }
 
-h2:hover a.anchor
+h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor
 {
     display: inline-block;
 
@@ -275,12 +275,12 @@ hr {
     }
 
     1% {
-        display: block;
+        display: inline-block;
         opacity: 0;
     }
 
     100% {
-        display: block;
+        display: inline-block;
         opacity: 0.4;
     }
 }
@@ -292,12 +292,12 @@ hr {
     }
 
     1% {
-        display: block;
+        display: inline-block;
         opacity: 0;
     }
 
     100% {
-        display: block;
+        display: inline-block;
         opacity: 0.4;
     }
 }
@@ -309,12 +309,12 @@ hr {
     }
 
     1% {
-        display: block;
+        display: inline-block;
         opacity: 0;
     }
 
     100% {
-        display: block;
+        display: inline-block;
         opacity: 0.4;
     }
 }
@@ -326,13 +326,14 @@ hr {
     }
 
     1% {
-        display: block;
+        display: inline-block;
         opacity: 0;
     }
 
     100% {
-        display: block;
+        display: inline-block;
         opacity: 0.4;
     }
 }
+
 
