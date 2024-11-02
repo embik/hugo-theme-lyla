@@ -2,7 +2,7 @@
 <html color-mode="user" lang="{{ site.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body>
-      {{ $paginate := .Paginate .Pages 5 }}
+      {{ $paginate := .Paginate .Pages 10 }}
       <header class="left-aligned">
         {{- partial "header.html" . -}}
         <h1>
