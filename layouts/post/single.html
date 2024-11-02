@@ -4,7 +4,7 @@
     <body>
       <header class="left-aligned">
         {{- partial "header.html" . -}}
-        <h1 style="margin: 0;">{{ .Title }}</h1>
+        <h1 class="post-title">{{ .Title }}</h1>
         <p style="margin: 0;">
             <small>
                 Published on {{ .Date.Format "Mon, 02 Jan 2006" }}. Estimated reading time: {{ .ReadingTime}} min. 

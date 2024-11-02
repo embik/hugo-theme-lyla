@@ -133,6 +133,13 @@ h1 {
   letter-spacing: -0.04em;
 }
 
+h1.post-title {
+  font-size: 3.8em;
+  letter-spacing: -0.06em;
+  margin: 0;
+  line-height: 1;
+}
+
 h2 {
   font-size: 1.8em;
   letter-spacing: -0.03em;
